@@ -101,20 +101,19 @@ body {
     width: 90%;
 }
 
-@media screen and (min-width:85rem) {
+@media screen and (min-width: 39rem) {
     .testimonials {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
-        "daniel daniel john kira"
-        "jean patrick patrick kira";
+        "daniel daniel"
+        "john jean"
+        "patrick kira";
     }
 
-    .testimonial {
-        width: auto;
-    }
+  
 
-    .testimonial:nth-child(1) {
+     .testimonial:nth-child(1) {
         grid-area: daniel;
     }
 
@@ -132,6 +131,30 @@ body {
 
     .testimonial:nth-child(5) {
         grid-area: kira;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonial__paragraph {
+        flex-grow: 1;
+    }
+        
+}
+
+@media screen and (min-width:78rem) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "daniel daniel john kira"
+        "jean patrick patrick kira";
+    }
+
+    .testimonial {
+        width: auto;
     }
 
     .testimonial:nth-child(4) {
