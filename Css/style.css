@@ -1,0 +1,101 @@
+:root {
+  /*********** COLORS ************/
+
+  /*  Primary */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /*  Neutral */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13px;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grayish-blue);
+}
+
+.testimonials {
+    padding: 5rem 0;
+    display: grid;
+    gap: 1.8rem;
+    justify-items: center;
+}
+
+.testimonial {
+    width: 330px;
+    border-radius: 10px;
+    padding: 1.8rem 1.8rem 2.5rem 2.3rem;
+    color: var(--white);
+}
+
+.testimonial--violet {
+    background-color: var(--moderate-violet);
+    color: var(--light-gray);
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top  right 1.8rem;
+}
+
+.testimonial--dark {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.testimonial--white {
+    background-color: var(--white);
+    color: var(--very-dark-blackish-blue);
+}
+
+.testimonial:nth-child(4) {
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.testimonial__person {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial__image {
+    border-radius: 50%;
+    width: 2.5rem;
+}
+    
+.testimonial__image--border {
+    outline: 1px solid white;
+}
+    
+.testimonial__status {
+    opacity: 0.5;
+}
+
+.testimonial__title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial__paragraph {
+    opacity: 0.7;
+    line-height: 1.5;
+    width: 90%;
+}
