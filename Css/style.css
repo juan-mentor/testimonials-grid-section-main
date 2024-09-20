@@ -39,15 +39,16 @@ body {
     display: grid;
     gap: 1.8rem;
     justify-items: center;
+    max-width: 85rem;
 }
 
 .testimonial {
-    width: 330px;
+    width: 88%;
     border-radius: 10px;
     padding: 1.8rem 1.8rem 2.5rem 2.3rem;
     color: var(--white);
 }
-
+    
 .testimonial--violet {
     background-color: var(--moderate-violet);
     color: var(--light-gray);
@@ -98,4 +99,46 @@ body {
     opacity: 0.7;
     line-height: 1.5;
     width: 90%;
+}
+
+@media screen and (min-width:85rem) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "daniel daniel john kira"
+        "jean patrick patrick kira";
+    }
+
+    .testimonial {
+        width: auto;
+    }
+
+    .testimonial:nth-child(1) {
+        grid-area: daniel;
+    }
+
+    .testimonial:nth-child(2) {
+        grid-area: john;
+    }
+
+    .testimonial:nth-child(3) {
+        grid-area: jean;
+    }
+
+    .testimonial:nth-child(4) {
+        grid-area: patrick;
+    }
+
+    .testimonial:nth-child(5) {
+        grid-area: kira;
+    }
+
+    .testimonial:nth-child(4) {
+        padding:1.8rem 1.2rem 2.5rem 2rem;
+    }
+
+    .testimonial__paragraph--error {
+        width: 95%;
+    }
 }
