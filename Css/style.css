@@ -111,7 +111,11 @@ body {
         "patrick kira";
     }
 
-  
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
      .testimonial:nth-child(1) {
         grid-area: daniel;
@@ -132,16 +136,6 @@ body {
     .testimonial:nth-child(5) {
         grid-area: kira;
     }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .testimonial__paragraph {
-        flex-grow: 1;
-    }
-        
 }
 
 @media screen and (min-width:78rem) {
@@ -155,13 +149,5 @@ body {
 
     .testimonial {
         width: auto;
-    }
-
-    .testimonial:nth-child(4) {
-        padding:1.8rem 1.2rem 2.5rem 2rem;
-    }
-
-    .testimonial__paragraph--error {
-        width: 95%;
     }
 }
